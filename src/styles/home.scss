@@ -1,0 +1,152 @@
+.home {
+  width: 100%;
+
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  justify-content: space-between;
+
+  > img {
+    width: 50%;
+    animation: imgUp 0.7s linear infinite alternate;
+  }
+
+  > div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3rem;
+
+    h1 {
+      width: 100%;
+      margin: 2rem;
+      font-weight: 900;
+      font-size: 2.2rem;
+
+      display: inline-block;
+      background-image: linear-gradient(to right, #eb2bab, #fa9ddb);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    p {
+      color: #090c31;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      font: 100 1.2rem sans-serif;
+    }
+
+    .btn-container {
+      display: flex;
+      width: 100%;
+      margin-top: 2rem;
+      gap: 2rem;
+
+      .btn-read {
+        background-color: #ff80d5;
+        color: white;
+        transition: all ease 0.3s;
+
+        &:hover {
+          background-color: #f111a7;
+          transform: scale(1.02);
+        }
+      }
+      .btn-contact {
+        border: 2px solid #ff80d5;
+        background-color: transparent;
+
+        &:hover {
+          background-color: #ff80d5;
+
+          transform: scale(1.02);
+          a {
+            color: white;
+          }
+        }
+        a {
+          color: #ff80d5;
+        }
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        border: none;
+        font-size: 1.1rem;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@keyframes imgUp {
+  to {
+    transform: translateY(-10px);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .home {
+    height: 80vh;
+
+    > div {
+      height: 80%;
+      width: 100%;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home {
+    height: 100vh;
+    flex-direction: column-reverse;
+
+    img {
+      width: 70%;
+    }
+    > div {
+      padding: 0 3rem;
+      width: 100%;
+
+      h1 {
+        width: 100%;
+        margin: 1rem;
+        font-weight: 800;
+        font-size: 2rem;
+      }
+      p {
+        letter-spacing: 1.5px;
+      }
+      .btn-container {
+        display: flex;
+
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .home {
+    overflow: hidden;
+    align-items: center;
+
+    img {
+      width: 90%;
+    }
+    > div {
+      h1 {
+        font-weight: 700;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
